@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "GPT 图片一键下载",
+  "version": "2.2.0",
+  "description": "悬停显示批量下载图标；通过 Windows 文件夹选择器保存并按 1、2、3…连续命名。",
+  "permissions": ["tabs", "nativeMessaging"],
+  "host_permissions": [
+    "https://chatgpt.com/*",
+    "https://*.chatgpt.com/*",
+    "https://chat.openai.com/*",
+    "https://*.openai.com/*",
+    "https://*.oaiusercontent.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chatgpt.com/*",
+        "https://*.chatgpt.com/*",
+        "https://chat.openai.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

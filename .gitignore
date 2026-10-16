@@ -1,0 +1,15 @@
+# Generated for the current Windows user and unpacked extension ID.
+native-host/native-host-manifest.json
+
+# Local build and release output.
+native-host/*.new.exe
+native-host/*.test.exe
+dist/
+*.zip
+
+# Editor and operating-system files.
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
